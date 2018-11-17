@@ -178,9 +178,7 @@ with open('hotdog-contest.csv', 'w', newline='', encoding='utf-8') as outfile:
     # create a writer object, single-quote character because some people
     # have nicknames, e.g. Pat "Deep Dish" Bertoletti
     # and quote all nonnumeric fields
-    writer = csv.writer(outfile,
-                        quotechar="'",
-                        quoting=csv.QUOTE_NONNUMERIC)
+    writer = csv.writer(outfile)
 
     # write header row
     writer.writerow(['year', 'name', 'hotdogs', 'gender'])
