@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 
 
 CSV_FILE = 'hotdog-contest.csv'
-
 URL = 'https://nathansfamous.com/hot-dog-eating-contest/hall-of-fame/'
 
 # fetch the page
@@ -39,8 +38,7 @@ with open(CSV_FILE, 'w') as outfile:
     headers = ['year', 'name', 'hotdogs_eaten', 'gender']
 
     # set up the file to write to
-    writer = csv.DictWriter(outfile,
-                            fieldnames=headers)
+    writer = csv.DictWriter(outfile, fieldnames=headers)
 
     # write out headers
     writer.writeheader()
