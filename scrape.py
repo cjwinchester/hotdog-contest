@@ -1,194 +1,131 @@
 import csv
 
-import unidecode
 import requests
 from bs4 import BeautifulSoup
 
 
-URL = 'https://nathansfamous.com/promos-and-fanfare/hot-dog-eating-contest/hall-of-fame/'
+CSV_FILE = 'hotdog-contest.csv'
 
-# grab the HTML and turn it into soup
+URL = 'https://nathansfamous.com/hot-dog-eating-contest/hall-of-fame/'
+
+# fetch the page
 r = requests.get(URL)
-soup = BeautifulSoup(r.text, 'html.parser')
 
-# grab a list of h3 nodes, which have the years of each contest
-years = soup.find_all('h3')
+# fix some garbage chars
+fixes = (
+    ('â', "'"),
+    ('â', '"'),
+    ('â', '"')
+)
 
+fixed_text = r.text
 
-def get_winners(year_node):
-    '''given a year node, grab the winner data and return
-       a list of lists formatted to correspond to these headers:
-           ['year', 'name', 'hotdogs', 'gender']
-       🌭 emojis represents missing values
-    '''
+for x in fixes:
+    fixed_text = fixed_text.replace(*x)
 
-    # get actual text of year
-    year = year_node.text.strip()
-    
-    # skip the records before 2002, which only include actual winner
-    if '2001' in year:
-        return
+# turn the HTML into soup
+soup = BeautifulSoup(fixed_text, 'html.parser')
 
-    # a list to hold all the data
-    ls = []
+# find the contests
+contests = soup.select('.result-panel')
 
-    # let's find the container, shall we
-    winner_panel = None
-    
-    # iterate over h3 node parents
-    for parent in year_node.parents:
+# skip <=2001 records, which only list the winner
+target_contests = [x for x in contests
+                   if '2001' not in x.find('h3').text]
 
-        # does it have a class attribute?
-        classlist = parent.attrs.get('class')
+with open(CSV_FILE, 'w') as outfile:
 
-        # if so, and 'winner-panel' is in there,
-        # this is our horse
-        if classlist and 'winner-panel' in classlist:
-            # set the one thing equal to the other thing
-            winner_panel = parent
+    # define headers
+    headers = ['year', 'name', 'hotdogs_eaten', 'gender']
 
-            # and stop
-            break
+    # set up the file to write to
+    writer = csv.DictWriter(outfile,
+                            fieldnames=headers)
 
-    # grab a handle to the div(s) with the actual winners 
-    winners = winner_panel.find_all('div', {'class': 'winner'})
+    # write out headers
+    writer.writeheader()
 
+    # loop over each contest
+    for div in target_contests:
 
-    def get_winner_deets(div, gender='🌭'):
-        '''given a div with the winner info, return a list
-           with the information we seek
-           ... for contests that don't specify gender, we assume
-           a gender of 🌭
-        '''
+        # find the year
+        year = int(div.find('h3').text)
 
-        # grab the name
-        winner_name = div.find('p', {'class': 'name'}).text.strip()
+        # find the winners
+        winners = div.select('div.winner')
 
-        # kill garbage chars
-        winner_name_clean = unidecode.unidecode(winner_name)
+        # set up a dict for genders
+        # for gendered contests, the first instance of each winner
+        # (and list of runners-up) is men, second is women
+        gender_dict = {
+            0: 'm',
+            1: 'f'
+        }
 
-        # grab the number of hot dogs eaten and turn it into
-        # a float
-        hd_eaten = float(div.find('p', {'class': 'number-of-hot-dogs-eaten'}).text.split()[0])
-        
-        # return a list of that hot mustardy data yeahhhhh
-        return [year, winner_name_clean, hd_eaten, gender]
+        # loop over the winner divs
+        for i, winner in enumerate(winners):
 
+            # if there is more than one winner, it's a gendered contest
+            if len(winners) > 1:
+                # ... so set the value accordingly
+                gender = gender_dict[i]
+            else:
+                # otherwise, leave blank
+                gender = ''
 
-    # if this is a gendered contest, there will be two winner divs
-    if len(winners) > 1:
+            # find the winner's name
+            winner_name = winner.find('p', {'class': 'name'}).text
 
-        # grab a handle to each one
-        winner_m, winner_f = winners
+            # find the number of hot dogs eaten and
+            # kill the words
+            winner_count = winner.find('p', {'class': 'number-of-hot-dogs-eaten'}).text.replace(' Hot Dogs', '') # NOQA
 
-        # call function to get winner deets from the dude
-        dude = get_winner_deets(winner_m, 'm')
+            winner_data = [year, winner_name, winner_count, gender]
 
-        # and append that list to the big list
-        ls.append(dude)
+            # write out the row of data
+            writer.writerow(dict(zip(headers, winner_data)))
 
-        # same for nondudes
-        dudette = get_winner_deets(winner_f, 'f')
-        ls.append(dudette)
+        # find the list(s) of runnersup
+        runners_up_list = div.find_all('ul')
 
-    # pre-2011 contests were co-ed, so there's just one item in
-    # our list of winner divs
-    else:
-        # grab deets and append
-        winner = get_winner_deets(winners[0])
-        ls.append(winner)
+        # loop over the runners-up lists
+        for i, rlist in enumerate(runners_up_list):
 
-    # next, grab the unordered lists with the runnerup data
-    runnersup = winner_panel.parent.find_all('ul')
+            # if more than one list, it's a gendered contest
+            if len(runners_up_list) > 1:
+                # ... so set the value accordingly
+                gender = gender_dict[i]
+            else:
+                # otherwise, leave blank
+                gender = ''
 
+            # get the people in this list
+            runnersup = rlist.find_all('li')
 
-    def get_runnerup_deets(ul, gender='🌭'):
-        '''given a `ul` list of runnersup, parse out the data and
-           return a list of lists of that data
-           ... for contests that don't specify gender, we assume
-           a gender of 🌭
-        '''
+            # loop over the people
+            for human in runnersup:
 
-        # grab the list items
-        ru = ul.find_all('li')
+                # grab the number of hot dogs eaten
+                hotdogs = human.text.rsplit(' ', 1)[-1]
 
-        # an interim list to hold the data as we iterate
-        ru_ls = []
+                # Meredith Boxberger did not have a total listed
+                # for her 2016 finish, so deal with that here
+                # per an email from the sanctioning body,
+                # she ate 15.5 that year
+                if hotdogs == 'Boxberger' and year == 2016:
+                    name = 'Meredith Boxberger'
+                    hotdogs = 15.5
+                    continue
+                else:
+                    # grab the name out of there
+                    name = human.text.rsplit(' ', 1)[0] \
+                                .replace(':', '').strip()
 
-        # loop over the items in the list
-        for human in ru:
+                    # and turn the hot dog count into a float
+                    hotdogs = float(hotdogs)
 
-            # try to grab the number of hot dogs eaten as a float
-            # got a corner case without a total, which throws everything off
-            # so for that one we have a record of 🌭 hot dogs eaten
-            try:
-                hotdogs = float(human.text.rsplit(' ', 1)[-1])
-                # grab the name out of there
-                name = human.text.rsplit(' ', 1)[0].replace(':', '').strip()
-            except ValueError:
-                hotdogs = '🌭'
-                name = human.text.replace(':', '').strip()
+                # dump the data into a list
+                data = [year, name, hotdogs, gender]
 
-            # kill garbage chars
-            name_clean = unidecode.unidecode(name)
-
-            # append to our interim list
-            ru_ls.append([year, name_clean, hotdogs, gender])
-        
-        # return the interim list
-        return ru_ls
-
-    # if this is a gendered contest
-    if len(runnersup) > 1:
-
-        # grab a handle to each list
-        runnersup_m, runnersup_f = runnersup
-        
-        # get deets on dude runnersup
-        ru_dudes = get_runnerup_deets(runnersup_m, gender='m')
-
-        # loop over that list and append each one to the master list
-        # dang we are doing a lot of passing data between lists here but that's ok
-        for ru in ru_dudes:
-            ls.append(ru)
-
-        # same for nondudes
-        ru_dudettes = get_runnerup_deets(runnersup_f, gender='f')
-        
-        for ru in ru_dudettes:
-            ls.append(ru)
-    
-    # if it's not a gendered contest, there's only one
-    # item in the list of `ul` nodes
-    else:
-        # grab deets for those peeps here
-        runnersup_ls = get_runnerup_deets(runnersup[0])
-
-        # loop over and append
-        for ru in runnersup_ls:
-            ls.append(ru)
-
-    # return that big old list of data
-    return ls
-
-
-# open a file
-with open('hotdog-contest.csv', 'w', newline='', encoding='utf-8') as outfile:
-
-    # create a writer object, single-quote character because some people
-    # have nicknames, e.g. Pat "Deep Dish" Bertoletti
-    # and quote all nonnumeric fields
-    writer = csv.writer(outfile)
-
-    # write header row
-    writer.writerow(['year', 'name', 'hotdogs', 'gender'])
-
-    # loop over the year nodes we grabbed way up above there
-    for year in years:
-
-        # call that big ol' function on it
-        winner_data = get_winners(year)
-
-        # if it returns something, write rows to file
-        if winner_data:
-            writer.writerows(winner_data)
+                # and write out to file
+                writer.writerow(dict(zip(headers, data)))

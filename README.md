@@ -10,6 +10,6 @@ I'm using `pipenv` to manage things, but you can use your tooling of choice.
 4. `pipenv run python scrape.py`
 
 ## Known issues
-The contest moved from co-ed to gender-separate in 2011, so not every contest has gender information. For those without, we assume a gender of 🌭.
+The contest moved from co-ed to gender-separate in 2011, so not every contest has gender information.
 
-Meredith Boxberger's results in 2016 do not include her total, so we assume a total of 🌭 hot dogs eaten.
+Meredith Boxberger's results in 2016 do not include her total, but according to an email from Sam Barclay at Major League Eating, the sanctioning body for the event, she finished 15.5 hot dogs and buns that year.

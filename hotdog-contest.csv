@@ -1,6 +1,6 @@
-year,name,hotdogs,gender
-2018,Joey Chestnut,74.0,m
-2018,Miki Sudo,37.0,f
+year,name,hotdogs_eaten,gender
+2018,Joey Chestnut,74,m
+2018,Miki Sudo,37,f
 2018,Carmen Cincotti,64.0,m
 2018,Darron Breeden,43.0,m
 2018,Geoffrey Esper,41.0,m
@@ -38,8 +38,8 @@ year,name,hotdogs,gender
 2018,Brynn Szeles,6.5,f
 2018,Kristina Rovtar,5.0,f
 2018,Prudence DiBenedetto,4.0,f
-2017,Joey Chestnut,72.0,m
-2017,Miki Sudo,41.0,f
+2017,Joey Chestnut,72,m
+2017,Miki Sudo,41,f
 2017,Carmen Cincotti,60.0,m
 2017,Matt Stonie,48.0,m
 2017,Geoffrey Esper,44.5,m
@@ -77,8 +77,8 @@ year,name,hotdogs,gender
 2017,Stevie Palmer,7.75,f
 2017,Deborah Bethea,6.0,f
 2017,Danielle Leppert-Simenauer,6.0,f
-2016,Joey Chestnut,70.0,m
-2016,Miki Sudo,38.0,f
+2016,Joey Chestnut,70,m
+2016,Miki Sudo,38,f
 2016,Matt Stonie,53.0,m
 2016,Carmen Cincotti,42.0,m
 2016,Gideon Oji,38.0,m
@@ -99,7 +99,6 @@ year,name,hotdogs,gender
 2016,Michelle Lesco,27.0,f
 2016,BeeJay Alexander,17.5,f
 2016,Nela Zisser,16.75,f
-2016,Meredith Boxberger,🌭,f
 2016,Sophia DeVita,15.5,f
 2016,Larell Marie Mele,15.0,f
 2016,Kassandra Zapata,13.5,f
@@ -108,8 +107,8 @@ year,name,hotdogs,gender
 2016,Noelle Dudzinski,7.75,f
 2016,Hilary Andrews,7.0,f
 2016,Elizabeth Petra,4.5,f
-2015,Matthew Stonie,62.0,m
-2015,Miki Sudo,38.0,f
+2015,Matthew Stonie,62,m
+2015,Miki Sudo,38,f
 2015,Joey Chestnut,60.0,m
 2015,Eater X,35.5,m
 2015,Erik Denmark,33.0,m
@@ -140,8 +139,8 @@ year,name,hotdogs,gender
 2015,Crystin Pactor,8.0,f
 2015,Marlene Wigginton,8.0,f
 2015,Angie Hendry,5.0,f
-2014,Joey Chestnut,61.0,m
-2014,Miki Sudo,34.0,f
+2014,Joey Chestnut,61,m
+2014,Miki Sudo,34,f
 2014,Matt Stonie,56.0,m
 2014,Tim Janus,44.0,m
 2014,Erik Denmark,34.0,m
@@ -169,10 +168,10 @@ year,name,hotdogs,gender
 2014,Nicole Kulig,7.5,f
 2014,Nicole Rodriguez,7.0,f
 2014,Val Bromann,3.0,f
-2013,Joey Chestnut,69.0,m
+2013,Joey Chestnut,69,m
 2013,Sonya Thomas,36.75,f
 2013,Matthew Stonie,51.0,m
-2013,Tim aEater Xa Janus,50.0,m
+2013,"Tim ""Eater X"" Janus",50.0,m
 2013,Bob Shoudt,39.75,m
 2013,Adrian Morgan,38.0,m
 2013,Aaron Osthoff,31.0,m
@@ -194,8 +193,8 @@ year,name,hotdogs,gender
 2013,Mary Bowers,10.0,f
 2013,Laura Riehman,6.0,f
 2013,Prudence Di Benedetto,6.0,f
-2012,Joey Chestnut,68.0,m
-2012,Sonya Thomas,45.0,f
+2012,Joey Chestnut,68,m
+2012,Sonya Thomas,45,f
 2012,Eater X Tim Janus,52.25,m
 2012,Pat Bertoletti,51.0,m
 2012,Matt Stonie,46.0,m
@@ -224,123 +223,123 @@ year,name,hotdogs,gender
 2012,Mia Davekos,6.0,f
 2012,Molly Nemunaitis,5.5,f
 2012,Janice Deregla,3.0,f
-2011,Joey Chestnut,62.0,m
-2011,Sonya Thomas,40.0,f
-2011,Pat aDeep Disha Bertoletti,53.0,m
-2011,Tim aEater Xa Janus,45.0,m
-2011,Bob aNotorious B.O.B.a Shoudt,39.0,m
-2011,Sean aFlasha Gordon,34.0,m
+2011,Joey Chestnut,62,m
+2011,Sonya Thomas,40,f
+2011,"Pat ""Deep Dish"" Bertoletti",53.0,m
+2011,"Tim ""Eater X"" Janus",45.0,m
+2011,"Bob ""Notorious B.O.B."" Shoudt",39.0,m
+2011,"Sean ""Flash"" Gordon",34.0,m
 2011,Matt Stonie,34.0,m
 2011,Juliet Lee,29.5,f
 2011,Stephanie Torres,28.5,f
 2011,Michelle Lesco,20.0,f
 2011,Larell Marie Mele,16.0,f
-2010,Joey Chestnut,54.0,🌭
-2010,Tim Eater X Janus,45.0,🌭
-2010,Pat Bertoletti,37.0,🌭
-2010,Sonya Thomas,36.0,🌭
-2010,Bob Shoudt,34.0,🌭
-2010,Erik Denmark,32.0,🌭
-2010,Gravy Brown,31.0,🌭
-2010,Allen Goldstein,28.0,🌭
-2010,Juliet Lee,27.0,🌭
-2010,Ben Monson,27.0,🌭
-2010,Sean Gordon,26.5,🌭
-2010,Pete Davekos,24.0,🌭
-2010,Badlands Booker,24.0,🌭
-2010,Crazy Legs Conti,20.0,🌭
-2010,Bryan Beard,15.5,🌭
-2010,Kris Adams,11.0,🌭
-2009,Joey Chestnut,68.0,🌭
-2009,Takeru Kobayashi,64.5,🌭
-2009,Pat Bertoletti,55.0,🌭
-2009,Tim Eater X Janus,53.0,🌭
-2009,Bob Shoudt,41.75,🌭
-2009,Sonya Thomas,41.0,🌭
-2009,Hall Hunt,38.5,🌭
-2009,Erik Denmrk,38.0,🌭
-2009,Juliet Lee,34.0,🌭
-2009,Badlands Booker,30.0,🌭
-2009,Gravy Brown,30.0,🌭
-2009,Jim Reeves,28.5,🌭
-2009,Crazy Legs Conti,25.0,🌭
-2009,Pete Davekos,25.0,🌭
-2009,Sean Gordon,25.0,🌭
-2009,Marco Marquez,23.0,🌭
-2009,Micah Collins,21.0,🌭
-2009,Franco Camerini,14.0,🌭
-2009,Bob Coccodrilli,14.0,🌭
-2008,Joey Chestnut,59.0,🌭
-2008,Takeru Kobayashi,59.0,🌭
-2008,Tim Janus,42.0,🌭
-2008,Pat Bertoletti,38.0,🌭
-2008,Sonya Thomas,34.0,🌭
-2008,Hall Hunt,30.0,🌭
-2008,Bob Shoudt,30.0,🌭
-2008,Juliet Lee,29.0,🌭
-2008,Erik Denmark,28.0,🌭
-2008,Juris Shibayama,28.0,🌭
-2008,Eric Booker,25.5,🌭
-2008,Patrick Vandam,25.0,🌭
-2008,Rich LeFevre,25.0,🌭
-2008,Crazy Legs Conti,24.0,🌭
-2008,Allan Goldstein,21.0,🌭
-2008,Tim Brown,20.0,🌭
-2008,Pat Philbin,19.0,🌭
-2008,Nathan Biller,18.5,🌭
-2008,Pete Davekos,18.0,🌭
-2008,Arturo Rios,16.0,🌭
-2008,Kevin Ross,14.0,🌭
-2007,Joey Chestnut,66.0,🌭
-2007,Takeru Kobayashi,63.0,🌭
-2007,Pat Bertoletti,49.0,🌭
-2007,Tim Janus,43.0,🌭
-2007,Sonya Thomas,39.0,🌭
-2007,Chip Simpson,35.0,🌭
-2007,Rob Schodt,35.0,🌭
-2007,Rich LeFevre,31.0,🌭
-2007,Hall Hunt,29.0,🌭
-2007,Juliet Lee,26.0,🌭
-2007,Dale Boone,25.0,🌭
-2007,Pat Philbin,24.0,🌭
-2007,Crazy Legs Conti,23.0,🌭
-2007,Erik Denmark,23.0,🌭
-2007,Tim Brown,22.0,🌭
-2007,"Arturo Rios, Jr.",21.0,🌭
-2006,Takeru Kobayashi,53.75,🌭
-2006,Joey Chestnut,52.0,🌭
-2006,Sonya Thomas,37.0,🌭
-2005,Takeru Kobayashi,49.0,🌭
-2005,Sonya Thomas,37.0,🌭
-2005,Joey Chestnut,32.0,🌭
-2005,Ed Jarvis,29.0,🌭
-2005,Kenji Oguni,29.0,🌭
-2005,Rich LeFevre,25.5,🌭
-2005,Carlene LeFevre,25.0,🌭
-2005,Ron Koch,23.0,🌭
-2005,Tim Janus,22.5,🌭
-2005,Eric Booker,22.0,🌭
-2005,Charles Hardy,22.0,🌭
-2005,Pat Philbin,20.0,🌭
-2005,Crazy Legs Conti,19.0,🌭
-2005,Joe LaRue,18.0,🌭
-2005,Don Lerman,15.0,🌭
-2005,Rob Burns,10.0,🌭
-2004,Takeru Kobayashi,53.5,🌭
-2004,Nobuyuki Shirota,38.0,🌭
-2004,Sonya Thomas,32.0,🌭
-2004,Rich LeFevre,27.75,🌭
-2004,Ed Jarvis,27.0,🌭
-2004,Eric Booker,27.0,🌭
-2004,Carlene LeFevre,22.0,🌭
-2004,Jim Reeves,21.0,🌭
-2004,Joe LaRue,20.0,🌭
-2004,Allan Goldstein,19.0,🌭
-2003,Takeru Kobayashi,44.5,🌭
-2003,Ed Jarvis,30.5,🌭
-2003,Eric Booker,29.0,🌭
-2003,Sonya Thomas,25.0,🌭
-2003,William Perry,4.0,🌭
-2002,Takeru Kobayashi,50.0,🌭
-2002,Eric Booker,26.0,🌭
-2002,Oleg Zhornitskiy,25.0,🌭
+2010,Joey Chestnut,54,
+2010,Tim Eater X Janus,45.0,
+2010,Pat Bertoletti,37.0,
+2010,Sonya Thomas,36.0,
+2010,Bob Shoudt,34.0,
+2010,Erik Denmark,32.0,
+2010,Gravy Brown,31.0,
+2010,Allen Goldstein,28.0,
+2010,Juliet Lee,27.0,
+2010,Ben Monson,27.0,
+2010,Sean Gordon,26.5,
+2010,Pete Davekos,24.0,
+2010,Badlands Booker,24.0,
+2010,Crazy Legs Conti,20.0,
+2010,Bryan Beard,15.5,
+2010,Kris Adams,11.0,
+2009,Joey Chestnut,68,
+2009,Takeru Kobayashi,64.5,
+2009,Pat Bertoletti,55.0,
+2009,Tim Eater X Janus,53.0,
+2009,Bob Shoudt,41.75,
+2009,Sonya Thomas,41.0,
+2009,Hall Hunt,38.5,
+2009,Erik Denmrk,38.0,
+2009,Juliet Lee,34.0,
+2009,Badlands Booker,30.0,
+2009,Gravy Brown,30.0,
+2009,Jim Reeves,28.5,
+2009,Crazy Legs Conti,25.0,
+2009,Pete Davekos,25.0,
+2009,Sean Gordon,25.0,
+2009,Marco Marquez,23.0,
+2009,Micah Collins,21.0,
+2009,Franco Camerini,14.0,
+2009,Bob Coccodrilli,14.0,
+2008,Joey Chestnut,59,
+2008,Takeru Kobayashi,59.0,
+2008,Tim Janus,42.0,
+2008,Pat Bertoletti,38.0,
+2008,Sonya Thomas,34.0,
+2008,Hall Hunt,30.0,
+2008,Bob Shoudt,30.0,
+2008,Juliet Lee,29.0,
+2008,Erik Denmark,28.0,
+2008,Juris Shibayama,28.0,
+2008,Eric Booker,25.5,
+2008,Patrick Vandam,25.0,
+2008,Rich LeFevre,25.0,
+2008,Crazy Legs Conti,24.0,
+2008,Allan Goldstein,21.0,
+2008,Tim Brown,20.0,
+2008,Pat Philbin,19.0,
+2008,Nathan Biller,18.5,
+2008,Pete Davekos,18.0,
+2008,Arturo Rios,16.0,
+2008,Kevin Ross,14.0,
+2007,Joey Chestnut,66,
+2007,Takeru Kobayashi,63.0,
+2007,Pat Bertoletti,49.0,
+2007,Tim Janus,43.0,
+2007,Sonya Thomas,39.0,
+2007,Chip Simpson,35.0,
+2007,Rob Schodt,35.0,
+2007,Rich LeFevre,31.0,
+2007,Hall Hunt,29.0,
+2007,Juliet Lee,26.0,
+2007,Dale Boone,25.0,
+2007,Pat Philbin,24.0,
+2007,Crazy Legs Conti,23.0,
+2007,Erik Denmark,23.0,
+2007,Tim Brown,22.0,
+2007,"Arturo Rios, Jr.",21.0,
+2006,Takeru Kobayashi,53.75,
+2006,Joey Chestnut,52.0,
+2006,Sonya Thomas,37.0,
+2005,Takeru Kobayashi,49,
+2005,Sonya Thomas,37.0,
+2005,Joey Chestnut,32.0,
+2005,Ed Jarvis,29.0,
+2005,Kenji Oguni,29.0,
+2005,Rich LeFevre,25.5,
+2005,Carlene LeFevre,25.0,
+2005,Ron Koch,23.0,
+2005,Tim Janus,22.5,
+2005,Eric Booker,22.0,
+2005,Charles Hardy,22.0,
+2005,Pat Philbin,20.0,
+2005,Crazy Legs Conti,19.0,
+2005,Joe LaRue,18.0,
+2005,Don Lerman,15.0,
+2005,Rob Burns,10.0,
+2004,Takeru Kobayashi,53.5,
+2004,Nobuyuki Shirota,38.0,
+2004,Sonya Thomas,32.0,
+2004,Rich LeFevre,27.75,
+2004,Ed Jarvis,27.0,
+2004,Eric Booker,27.0,
+2004,Carlene LeFevre,22.0,
+2004,Jim Reeves,21.0,
+2004,Joe LaRue,20.0,
+2004,Allan Goldstein,19.0,
+2003,Takeru Kobayashi,44.5,
+2003,Ed Jarvis,30.5,
+2003,Eric Booker,29.0,
+2003,Sonya Thomas,25.0,
+2003,William Perry,4.0,
+2002,Takeru Kobayashi,50,
+2002,Eric Booker,26.0,
+2002,Oleg Zhornitskiy,25.0,
