@@ -76,7 +76,7 @@ with open(CSV_FILE, 'w') as outfile:
 
             # find the number of hot dogs eaten and
             # kill the words
-            winner_count = winner.find('p', {'class': 'number-of-hot-dogs-eaten'}).text.replace(' Hot Dogs', '') # NOQA
+            winner_count = float(winner.find('p', {'class': 'number-of-hot-dogs-eaten'}).text.replace(' Hot Dogs', '')) # NOQA
 
             winner_data = [year, winner_name, winner_count, gender]
 
