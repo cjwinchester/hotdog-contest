@@ -1,5 +1,5 @@
-# 🌭🌭🌭🤢🤮 Nathans Hot Dog Eating Contest scraper
-Some Python to scrape a list of winners of the annual Nathan's Hot Dog Eating Contest into a CSV, from 2002-present.
+# 🌭🌭🌭🤢🤮 Nathans Famous Hot Dog Eating Contest scraper
+Some Python to scrape a list of winners of the annual Nathan's Famous Hot Dog Eating Contest into a CSV, from 2002-present.
 
 ## Run it!
 I'm using `pipenv` to manage things, but you can use your tooling of choice.
