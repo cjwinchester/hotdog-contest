@@ -113,7 +113,6 @@ with open(CSV_FILE, 'w') as outfile:
                 if hotdogs == 'Boxberger' and year == 2016:
                     name = 'Meredith Boxberger'
                     hotdogs = 15.5
-                    continue
                 else:
                     # grab the name out of there
                     name = human.text.rsplit(' ', 1)[0] \
