@@ -1,4 +1,37 @@
 year,name,hotdogs_eaten,gender
+2019,Joey Chestnut,71.0,m
+2019,Miki Sudo,31.0,f
+2019,Darron Breeden,50.0,m
+2019,Geoffrey Esper,47.0,m
+2019,Matt Stonie,46.0,m
+2019,Max Suzuki,39.0,m
+2019,Nick Wehry,36.0,m
+2019,Gideon Oji,34.0,m
+2019,Matt Hazzard,34.0,m
+2019,Juan Neave,29.0,m
+2019,Adam Moran,28.5,m
+2019,Ronnie Hartman,28.5,m
+2019,Derek Jacobs,27.0,m
+2019,Pablo Martinez,27.0,m
+2019,Adrian Morgan,26.0,m
+2019,George Chiger,26.0,m
+2019,Juan Rodriguez,26.0,m
+2019,Darrien Thomas,22.0,m
+2019,Steve Hendry,22.0,m
+2019,Michelle Lesco,26.5,f
+2019,Juliet Lee,23.0,f
+2019,Sarah Reinecke,23.0,f
+2019,Larell Marie Mele,18.0,f
+2019,Sophia DeVita,14.0,f
+2019,Katie Prettyman,12.5,f
+2019,Holly Titus,11.0,f
+2019,Kelly Wong,10.5,f
+2019,Kathryn Tesch,10.5,f
+2019,Jocelyn Walker,9.0,f
+2019,Mary Bowers,8.0,f
+2019,Juliet Goldberg,7.0,f
+2019,Rene Rovtar,7.0,f
+2019,Katherine Wong,6.0,f
 2018,Joey Chestnut,74.0,m
 2018,Miki Sudo,37.0,f
 2018,Carmen Cincotti,64.0,m
@@ -99,6 +132,7 @@ year,name,hotdogs_eaten,gender
 2016,Michelle Lesco,27.0,f
 2016,BeeJay Alexander,17.5,f
 2016,Nela Zisser,16.75,f
+2016,Meredith Boxberger,15.5,f
 2016,Sophia DeVita,15.5,f
 2016,Larell Marie Mele,15.0,f
 2016,Kassandra Zapata,13.5,f
@@ -171,7 +205,7 @@ year,name,hotdogs_eaten,gender
 2013,Joey Chestnut,69.0,m
 2013,Sonya Thomas,36.75,f
 2013,Matthew Stonie,51.0,m
-2013,"Tim ""Eater X"" Janus",50.0,m
+2013,Tim “Eater X” Janus,50.0,m
 2013,Bob Shoudt,39.75,m
 2013,Adrian Morgan,38.0,m
 2013,Aaron Osthoff,31.0,m
@@ -225,10 +259,10 @@ year,name,hotdogs_eaten,gender
 2012,Janice Deregla,3.0,f
 2011,Joey Chestnut,62.0,m
 2011,Sonya Thomas,40.0,f
-2011,"Pat ""Deep Dish"" Bertoletti",53.0,m
-2011,"Tim ""Eater X"" Janus",45.0,m
-2011,"Bob ""Notorious B.O.B."" Shoudt",39.0,m
-2011,"Sean ""Flash"" Gordon",34.0,m
+2011,Pat “Deep Dish” Bertoletti,53.0,m
+2011,Tim “Eater X” Janus,45.0,m
+2011,Bob “Notorious B.O.B.” Shoudt,39.0,m
+2011,Sean “Flash” Gordon,34.0,m
 2011,Matt Stonie,34.0,m
 2011,Juliet Lee,29.5,f
 2011,Stephanie Torres,28.5,f
