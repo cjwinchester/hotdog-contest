@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 
 CSV_FILE = 'hotdog-contest.csv'
-URL = 'https://nathansfamous.com/hot-dog-eating-contest/hall-of-fame/'
+URL = 'https://nathansfranks.sfdbrands.com/en-us/promotions/hot-dog-eating-contest/hall-of-fame/'  # noqa
 
 # fetch the page
 r = requests.get(URL)
